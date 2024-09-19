@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:watchstore/res/dimens.dart';
 
-class AppButtonStyle {
-  AppButtonStyle._();
+class AppButtonStyles {
+  AppButtonStyles._();
 
   static ButtonStyle mainButtonStyle = ButtonStyle(
       shape: WidgetStatePropertyAll(RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppDimens.medium))));
+          borderRadius: BorderRadius.circular(AppDimens.medium))
+          ),
+          );
 }
