@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:watchstore/gen/fonts.gen.dart';
 import 'package:watchstore/res/colors.dart';
@@ -40,6 +39,7 @@ class AppTextStyles {
   static const TextStyle btmNavActive = TextStyle(
       fontFamily: FontFamily.dana,
       fontSize: 12,
+      fontWeight: FontWeight.w800,
       color: AppColors.btmNavActiveItem);
 
   static const TextStyle btmNavInActive = TextStyle(

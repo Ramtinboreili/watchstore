@@ -12,9 +12,15 @@ class Avatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ClipRRect(borderRadius: BorderRadius.circular(100),child: Image.asset(Assets.png.avatar.path) ,),
-        (AppDimens.medium*1.5).height , 
-        const Text(AppStrings.chooseProfileImage , style: AppTextStyles.avatarText,)
+        ClipRRect(
+          borderRadius: BorderRadius.circular(100),
+          child: Image.asset(Assets.png.avatar.path),
+        ),
+        (AppDimens.medium * 1.5).height,
+        const Text(
+          AppStrings.chooseProfileImage,
+          style: AppTextStyles.avatarText,
+        )
       ],
     );
   }

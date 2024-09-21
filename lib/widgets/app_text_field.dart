@@ -27,7 +27,8 @@ class AppTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(AppDimens.small , 4,AppDimens.small,0),
+      padding:
+          const EdgeInsets.fromLTRB(AppDimens.small, 4, AppDimens.small, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
@@ -36,9 +37,14 @@ class AppTextField extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(perfixlabel ,style: AppTextStyles.title,),
-                Text(label , style: AppTextStyles.title,),
-
+                Text(
+                  perfixlabel,
+                  style: AppTextStyles.title,
+                ),
+                Text(
+                  label,
+                  style: AppTextStyles.title,
+                ),
               ],
             ),
           ),
@@ -50,7 +56,10 @@ class AppTextField extends StatelessWidget {
               textAlign: textAlign,
               controller: controller,
               keyboardType: inputType,
-              decoration: InputDecoration(hintText: hint, prefixIcon: icon , hintStyle: AppTextStyles.hint),
+              decoration: InputDecoration(
+                  hintText: hint,
+                  prefixIcon: icon,
+                  hintStyle: AppTextStyles.hint),
             ),
           )
         ],
