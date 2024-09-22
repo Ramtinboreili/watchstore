@@ -11,7 +11,7 @@ import 'package:watchstore/widgets/main_button.dart';
 // ignore: must_be_immutable
 class GetOtpScreen extends StatelessWidget {
   GetOtpScreen({super.key});
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {

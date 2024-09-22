@@ -10,8 +10,8 @@ import 'package:watchstore/widgets/main_button.dart';
 
 // ignore: must_be_immutable
 class RegisterScreen extends StatelessWidget {
-  TextEditingController _controllerNameLastName = TextEditingController();
-  TextEditingController _controllerHomeNumber = TextEditingController();
+  final TextEditingController _controllerNameLastName = TextEditingController();
+  final TextEditingController _controllerHomeNumber = TextEditingController();
 
   RegisterScreen({super.key});
 

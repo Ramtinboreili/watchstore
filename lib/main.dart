@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:watchstore/component/theme.dart';
+import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/rout/names.dart';
 import 'package:watchstore/rout/route.dart';
 
 void main() {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: AppColors.primaryColor,
+      systemNavigationBarColor: AppColors.primaryColor));
   runApp(const MyApp());
 }
 
