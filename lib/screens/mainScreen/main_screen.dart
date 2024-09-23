@@ -24,8 +24,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
-   List <int> _routeHistory= [BtmNavScreenIndex.home];
+  List<int> _routeHistory = [BtmNavScreenIndex.home];
 
   int selectedIndex = BtmNavScreenIndex.home;
   final GlobalKey<NavigatorState> _homekey = GlobalKey();
@@ -33,23 +32,21 @@ class _MainScreenState extends State<MainScreen> {
   final GlobalKey<NavigatorState> _profilekey = GlobalKey();
   // final bool _canpop = true;
 
-  late final map ={
-    BtmNavScreenIndex.home : _homekey ,
-    BtmNavScreenIndex.bascket : _bascketkey ,
-    BtmNavScreenIndex.profile : _profilekey ,
+  late final map = {
+    BtmNavScreenIndex.home: _homekey,
+    BtmNavScreenIndex.bascket: _bascketkey,
+    BtmNavScreenIndex.profile: _profilekey,
   };
 
   Future<bool> _onWillPop() async {
-
     if (map[selectedIndex]!.currentState!.canPop()) {
       map[selectedIndex]!.currentState!.pop();
-    }else if (_routeHistory.length>1 ){
+    } else if (_routeHistory.length > 1) {
       setState(() {
         _routeHistory.removeLast();
-        selectedIndex = _routeHistory.last ; 
+        selectedIndex = _routeHistory.last;
       });
     }
-
 
     return false;
   }
@@ -145,4 +142,3 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 }
- 

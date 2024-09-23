@@ -30,17 +30,24 @@ class HomeScreen extends StatelessWidget {
                             offset: Offset(0, 3),
                             blurRadius: 4)
                       ]),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                        SvgPicture.asset(Assets.svg.search),
-                        const SizedBox.shrink(),
-                        const Text(AppStrings.searchProduct  , style: AppTextStyles.hint,),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Image.asset(Assets.png.mainLogo.path , scale: 0.5,),
-                        )
-                      ],),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SvgPicture.asset(Assets.svg.search),
+                      const SizedBox.shrink(),
+                      const Text(
+                        AppStrings.searchProduct,
+                        style: AppTextStyles.hint,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.asset(
+                          Assets.png.mainLogo.path,
+                          scale: 0.5,
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
