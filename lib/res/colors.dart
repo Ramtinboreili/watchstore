@@ -24,6 +24,7 @@ class AppColors {
   ];
 
   static const Color mainBg = Colors.white;
+
   static const Color title = Colors.black;
   static const Color oldPrice = Color.fromARGB(255, 191, 191, 191);
   static const Color shadow = Color.fromARGB(90, 0, 0, 0);

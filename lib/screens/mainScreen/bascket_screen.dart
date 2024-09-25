@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/screens/product_list.dart';
 
 class BascketScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class BascketScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: AppColors.primaryColor,
       width: double.infinity,
       height: double.infinity,
       child: Column(

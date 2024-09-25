@@ -6,7 +6,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.indigo,
+      color: Colors.deepPurple,
       width: double.infinity,
       height: double.infinity,
     );
