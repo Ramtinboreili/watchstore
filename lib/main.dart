@@ -10,6 +10,7 @@ void main() {
       statusBarColor: AppColors.primaryColor,
       systemNavigationBarColor: AppColors.primaryColor));
   runApp(const MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {

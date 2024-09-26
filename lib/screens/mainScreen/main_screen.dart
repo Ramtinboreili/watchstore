@@ -140,5 +140,7 @@ class _MainScreenState extends State<MainScreen> {
         print(_routeHistory);
       }
     });
+
+    
   }
 }

@@ -52,9 +52,6 @@ class $AssetsSvgGen {
   /// File path: assets/svg/delivered.svg
   String get delivered => 'assets/svg/delivered.svg';
 
-  /// File path: assets/svg/desktop.svg
-  String get desktop => 'assets/svg/desktop.svg';
-
   /// File path: assets/svg/digital.svg
   String get digital => 'assets/svg/digital.svg';
 
@@ -91,6 +88,9 @@ class $AssetsSvgGen {
   /// File path: assets/svg/sort.svg
   String get sort => 'assets/svg/sort.svg';
 
+  /// File path: assets/svg/table.svg
+  String get table => 'assets/svg/table.svg';
+
   /// File path: assets/svg/user.svg
   String get user => 'assets/svg/user.svg';
 
@@ -107,7 +107,6 @@ class $AssetsSvgGen {
         close,
         delete,
         delivered,
-        desktop,
         digital,
         home,
         inProccess,
@@ -120,6 +119,7 @@ class $AssetsSvgGen {
         search,
         smart,
         sort,
+        table,
         user,
         userMenu
       ];

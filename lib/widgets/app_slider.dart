@@ -14,16 +14,19 @@ final List<String> imgList = [
 class AppSlider extends StatefulWidget {
   const AppSlider({
     super.key,
-    required this.imagList
+    required this.imagList, required this.indV  ,
   });
 
-  final List<String> imagList ;
 
+  final List<String> imagList ;
+  final bool indV ;
+  
   @override
   State<AppSlider> createState() => _AppSliderState();
 }
 
 class _AppSliderState extends State<AppSlider> {
+
 
   final CarouselSliderController _controller = CarouselSliderController();
   final List<Widget> items = imgList
@@ -41,6 +44,9 @@ class _AppSliderState extends State<AppSlider> {
       .toList();
 
 int _current = 0 ;
+  final bool indV =true;
+
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -60,23 +66,26 @@ int _current = 0 ;
                 },
               )),
               AppDimens.small.height,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: imgList.asMap().entries.map(
-              (e) => Padding(
-                padding: const EdgeInsets.only(left: 8),
-                child: GestureDetector(
-                  onTap: () => _controller.animateToPage(e.key),
-                  child: Container(
-                    width: 12,
-                    height: 12,
-                    decoration:
-                        BoxDecoration(shape: BoxShape.circle,
-                       color: _current==e.key?  Colors.black : Colors.grey),
+          Visibility(
+            visible: indV,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: imgList.asMap().entries.map(
+                (e) => Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: GestureDetector(
+                    onTap: () => _controller.animateToPage(e.key),
+                    child: Container(
+                      width: 12,
+                      height: 12,
+                      decoration:
+                          BoxDecoration(shape: BoxShape.circle,
+                         color: _current==e.key?  Colors.black : Colors.grey),
+                    ),
                   ),
                 ),
-              ),
-            ).toList()
+              ).toList()
+            ),
           )
         ],
       ),

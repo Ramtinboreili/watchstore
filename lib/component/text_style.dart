@@ -75,7 +75,7 @@ class AppTextStyles {
 
   static const TextStyle prodTimerStyle = TextStyle(
     fontFamily: FontFamily.dana,
-    fontSize: 18,
+    fontSize: 17,
     color: Colors.blue,
     fontWeight: FontWeight.w500,
   );

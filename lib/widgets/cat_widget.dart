@@ -25,8 +25,8 @@ class Catwidget extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.all(AppDimens.small),
-            height: size.height * 0.1,
-            width: size.height * 0.1,
+            height: size.height * 0.08,
+            width: size.height * 0.08,
             decoration: BoxDecoration(
                 gradient:  LinearGradient(
                     colors: gradcolors,
