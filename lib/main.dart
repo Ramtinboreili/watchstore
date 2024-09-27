@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:watchstore/component/theme.dart';
 import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/rout/names.dart';
-import 'package:watchstore/rout/route.dart';
+import 'package:watchstore/screens/product_single_screen.dart';
 
 void main() {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
       title: 'watch Store',
       theme: lightTheme(),
       initialRoute: ScreenNames.root ,
-      routes: routes,
+      // routes: routes,
+      home: ProductSingleScreen(),
     );
   }
 }

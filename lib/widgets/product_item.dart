@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:watchstore/component/extentions.dart';
@@ -10,15 +9,19 @@ import 'package:watchstore/res/strings.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({
-    super.key,required this.productname,required this.price, this.oldPrice=0, this.discount = 0, this.time=0,
+    super.key,
+    required this.productname,
+    required this.price,
+    this.oldPrice = 0,
+    this.discount = 0,
+    this.time = 0,
   });
 
-  final productname ; 
-  final int price  ; 
-  final int oldPrice  ; 
-  final int discount ; 
-  final time ; 
-
+  final productname;
+  final int price;
+  final int oldPrice;
+  final int discount;
+  final time;
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +31,7 @@ class ProductItem extends StatelessWidget {
       height: 297,
       width: 200,
       decoration: BoxDecoration(
-          borderRadius:
-              BorderRadius.circular(AppDimens.medium),
+          borderRadius: BorderRadius.circular(AppDimens.medium),
           gradient: const LinearGradient(
               colors: AppColors.productBgGradiant,
               begin: Alignment.topCenter,
@@ -39,30 +41,28 @@ class ProductItem extends StatelessWidget {
           AppDimens.small.height,
           Image.asset(Assets.png.unnamed.path),
           AppDimens.small.height,
-           Align(
+          Align(
               alignment: Alignment.centerRight,
               child: Text(
                 productname,
                 style: AppTextStyles.productTitle,
               )),
-              AppDimens.small.height,
+          AppDimens.small.height,
           Row(
-            mainAxisAlignment:
-                MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 '${price.seppratWithComma}  تومان',
                 style: AppTextStyles.title2,
               ),
               Visibility(
-                visible: discount>0?true:false,
+                visible: discount > 0 ? true : false,
                 child: Container(
                   padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                      borderRadius:
-                          BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12),
                       color: Colors.red),
-                  child:  Text(
+                  child: Text(
                     "$discount%",
                     style: AppTextStyles.tagTitle,
                   ),
@@ -72,7 +72,7 @@ class ProductItem extends StatelessWidget {
           ),
           //old Price
           Visibility(
-            visible: oldPrice>0?true:false,
+            visible: oldPrice > 0 ? true : false,
             child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -82,7 +82,7 @@ class ProductItem extends StatelessWidget {
           ),
           AppDimens.small.height,
           Visibility(
-            visible: time>0?true:false,
+            visible: time > 0 ? true : false,
             child: Container(
               width: double.infinity,
               height: 2,
@@ -90,13 +90,13 @@ class ProductItem extends StatelessWidget {
             ),
           ),
           AppDimens.small.height,
-         Visibility(
-          visible: time>0?true:false,
-           child: Text(
+          Visibility(
+            visible: time > 0 ? true : false,
+            child: Text(
               "09:26:22",
               style: AppTextStyles.prodTimerStyle,
             ),
-         )
+          )
         ],
       ),
     );
@@ -104,8 +104,8 @@ class ProductItem extends StatelessWidget {
 }
 
 class VerticalText extends StatelessWidget {
-  VerticalText({super.key,required this.title});
-  final title ;
+  VerticalText({super.key, required this.title});
+  final title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -126,7 +126,7 @@ class VerticalText extends StatelessWidget {
               ],
             ),
             AppDimens.medium.height,
-             Text(
+            Text(
               title,
               style: AppTextStyles.amazingStyle,
             )

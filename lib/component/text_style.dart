@@ -37,7 +37,7 @@ class AppTextStyles {
   static TextStyle caption = TextStyle(
       fontFamily: FontFamily.dana,
       fontSize: 13,
-      color: AppColors.title.withAlpha(150),
+      color: AppColors.title.withAlpha(175),
       fontWeight: FontWeight.normal);
 
   static TextStyle caption1 = const TextStyle(

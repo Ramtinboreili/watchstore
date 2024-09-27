@@ -4,8 +4,12 @@ import 'package:flutter_svg/svg.dart';
 import 'package:watchstore/component/extentions.dart';
 import 'package:watchstore/component/text_style.dart';
 import 'package:watchstore/gen/assets.gen.dart';
+import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/res/dimens.dart';
 import 'package:watchstore/res/strings.dart';
+import 'package:watchstore/widgets/cart_badge.dart';
+import 'package:watchstore/widgets/custom_appBar.dart';
+import 'package:watchstore/widgets/product_item.dart';
 
 class ProductListScreen extends StatelessWidget {
   const ProductListScreen({super.key});
@@ -14,13 +18,11 @@ class ProductListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 12,right: 12),
+          appBar: CustomAppBar(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(CupertinoIcons.cart),
+                CartBadge(count: 2),
                 Row(
                   children: [
                     const Text(
@@ -36,34 +38,63 @@ class ProductListScreen extends StatelessWidget {
               ],
             ),
           ),
-        ),
-        body: Container(
-          color: const Color.fromARGB(255, 142, 75, 30),
-          width: double.infinity,
-          height: double.infinity,
-          child: const Center(
-              child: Text(
-            "ProductListScreen",
-            style: TextStyle(fontSize: 40),
+          body: Column(
+            children: [AppDimens.medium.height, TagList() , ProductGridview()],
           )),
+    );
+  }
+}
+
+class TagList extends StatelessWidget {
+  const TagList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: AppDimens.medium),
+      child: SizedBox(
+        height: 26,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 9,
+          reverse: true,
+          physics: ClampingScrollPhysics(),
+          itemBuilder: (context, index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: AppDimens.small,
+              ),
+              padding: const EdgeInsets.symmetric(
+                  horizontal: AppDimens.small, vertical: 3),
+              decoration: BoxDecoration(
+                color: AppColors.primaryColor,
+                borderRadius: BorderRadius.circular(AppDimens.medium),
+              ),
+              child: Text(
+                "نیوفورس",
+                style: AppTextStyles.tagTitle,
+              ),
+            );
+          },
         ),
       ),
     );
   }
 }
 
-class CustomAppBar extends StatelessWidget implements PreferredSize {
-  const CustomAppBar({super.key, required this.child});
-
-  @override
-  final Widget child;
+class ProductGridview extends StatelessWidget {
+  const ProductGridview({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return PreferredSize(preferredSize: preferredSize, child: child);
+    return Expanded(
+        child: GridView.builder(
+          itemCount: 30,
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2, crossAxisSpacing: 2, mainAxisSpacing: 2 , childAspectRatio: 0.70),
+      itemBuilder: (context, index) {
+        return const ProductItem(productname: 'ساعت کاسیو', price: 1277000 , time: 1,discount: 14,oldPrice: 1600000,);
+      },
+    ));
   }
-
-  @override
-  // TODO: implement preferredSize
-  Size get preferredSize => const Size.fromHeight(50);
 }
