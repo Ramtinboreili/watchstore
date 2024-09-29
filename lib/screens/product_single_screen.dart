@@ -3,9 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:watchstore/component/extentions.dart';
 import 'package:watchstore/component/text_style.dart';
 import 'package:watchstore/gen/assets.gen.dart';
-import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/res/dimens.dart';
 import 'package:watchstore/res/strings.dart';
+import 'package:watchstore/widgets/add_to_cart.dart';
 import 'package:watchstore/widgets/cart_badge.dart';
 import 'package:watchstore/widgets/custom_appBar.dart';
 
@@ -75,79 +75,11 @@ class ProductSingleScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(
+              const Positioned(
                 bottom: 0,
                 left: 0,
                 right: 0,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: AppDimens.medium),
-                  width: double.infinity,
-                  height: 75,
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(16),
-                        topRight: Radius.circular(16),
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                            color: AppColors.shadow,
-                            offset: Offset(0, 0),
-                            blurRadius: 4)
-                      ]),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '${1200000.seppratWithComma}  تومان',
-                                style: AppTextStyles.title2,
-                              ),
-                              AppDimens.small.width,
-                              Visibility(
-                                visible: true,
-                                child: Container(
-                                  padding: const EdgeInsets.all(6),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(12),
-                                      color: Colors.red),
-                                  child: const Text(
-                                    "20%",
-                                    style: AppTextStyles.tagTitle,
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                          Visibility(
-                            visible: true,
-                            child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  16000000.seppratWithComma,
-                                  style: AppTextStyles.oldPriceStyle,
-                                )),
-                          ),
-                        ],
-                      ),
-                      ElevatedButton(
-                          onPressed: () {},
-                          child: Container(
-                            color: AppColors.primaryColor,
-                            child: const Text(
-                              AppStrings.addToBasket,
-                              style: AppTextStyles.mainbuttn,
-                            ),
-                          )),
-                    ],
-                  ),
-                ),
+                child:  AddToCart(price: 1468000,discount: 10,oldPrice: 1700000,),
               )
             ],
           )),

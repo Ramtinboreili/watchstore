@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:watchstore/component/theme.dart';
 import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/rout/names.dart';
+import 'package:watchstore/rout/route.dart';
 import 'package:watchstore/screens/product_single_screen.dart';
 
 void main() {
@@ -22,8 +23,8 @@ class MyApp extends StatelessWidget {
       title: 'watch Store',
       theme: lightTheme(),
       initialRoute: ScreenNames.root ,
-      // routes: routes,
-      home: ProductSingleScreen(),
+      routes: routes,
+      // home: ProductSingleScreen(),
     );
   }
 }

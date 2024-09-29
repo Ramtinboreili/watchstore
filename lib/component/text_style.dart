@@ -18,7 +18,8 @@ class AppTextStyles {
       fontWeight: FontWeight.bold);
 
   static const TextStyle selectedTab = TextStyle(
-      fontFamily: FontFamily.dana, fontSize: 14, color: AppColors.title);
+      fontFamily: FontFamily.dana,
+       fontSize: 14, color: AppColors.title);
 
   static TextStyle unSelectedTab = TextStyle(
       fontFamily: FontFamily.dana,

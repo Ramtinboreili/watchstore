@@ -42,7 +42,7 @@ abstract class AppStrings {
   static const String addToBasket = "افزودن به سبد خرید";
   static const String count = "عدد";
   static const String totalPrice = "مجموع  $replace تومان";
-  static const String continueToPurchase = "مجموع  $replace تومان";
+  static const String continueToPurchase = 'ادامه فرآیند خرید';
   static const String userProfile = "پروفایل کاربر";
   static const String activeAddress = "آدرس فعال";
   static const String termOfService = "قوانین و مقررات";

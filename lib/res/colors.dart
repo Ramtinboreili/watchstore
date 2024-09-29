@@ -36,7 +36,7 @@ class AppColors {
   static const Color borderColor = Colors.grey;
   static const Color focusedBorderColor = Colors.blue;
   static const Color primaryColor = Colors.blue;
-  static const Color surfaceColor = Color.fromARGB(255, 243, 243, 243);
+  static const Color surfaceColor = Color.fromARGB(255, 222, 222, 222);
   static const Color focusedTextField = Colors.white;
   static const Color unFocusedTextField = Color.fromARGB(255, 251, 251, 251);
   static const Color mainButtonText = Color.fromARGB(255, 255, 255, 255);
@@ -46,4 +46,5 @@ class AppColors {
   static const Color amazingColor = Color.fromARGB(255, 57, 24, 80);
   static const Color success = Colors.green;
   static const Color onSuccess = Colors.white;
+  static const Color continueToPurchase = Color.fromARGB(255, 236, 47, 47);
 }

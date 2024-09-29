@@ -19,29 +19,36 @@ class GetOtpScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SizedBox(
-                width: double.infinity,
-                child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset(Assets.png.mainLogo.path),
-          (AppDimens.large).height,
-          Text(AppStrings.otpCodeSendFor
-              .replaceAll(AppStrings.replace, "09122132114") , style: AppTextStyles.title,),
-              AppDimens.small.height,
-          const Text(AppStrings.wrongNumberEditNumber , style: AppTextStyles.primaryThemeTextStyle, ),
-          (AppDimens.large).height,
-          AppTextField(
-              label: AppStrings.enterVerificationCode,
-              hint: AppStrings.hintVerificationCode,
-              controller: _controller),
-          MainButton(
-            text: AppStrings.next,
-            onPressed: () => Navigator.pushNamed(context, ScreenNames.registerScreen),
-          )
-        ],
-                ),
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(Assets.png.mainLogo.path),
+              (AppDimens.large).height,
+              Text(
+                AppStrings.otpCodeSendFor
+                    .replaceAll(AppStrings.replace, "09122132114"),
+                style: AppTextStyles.title,
               ),
+              AppDimens.small.height,
+              const Text(
+                AppStrings.wrongNumberEditNumber,
+                style: AppTextStyles.primaryThemeTextStyle,
+              ),
+              (AppDimens.large).height,
+              AppTextField(
+                  label: AppStrings.enterVerificationCode,
+                  hint: AppStrings.hintVerificationCode,
+                  controller: _controller),
+              MainButton(
+                text: AppStrings.next,
+                onPressed: () =>
+                    Navigator.pushNamed(context, ScreenNames.registerScreen),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

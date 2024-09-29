@@ -91,12 +91,18 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // second Slider
-              const AppSlider(
-                imagList: [],
-                indV: false,
+              AppDimens.medium.height,
+              // Banner
+              Container(
+                padding: EdgeInsets.all(AppDimens.medium),
+                // margin: EdgeInsets.all(AppDimens.small),
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(120)),
+                child: Image.network(
+                  'https://ticktackgallery.com/media/wysiwyg/ticktackbanner/mainpage-desk1.jpg',
+                ),
               ),
-
+              AppDimens.medium.height,
               //Most seller
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
