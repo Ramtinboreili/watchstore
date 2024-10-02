@@ -7,6 +7,7 @@ import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/res/dimens.dart';
 import 'package:watchstore/widgets/surface_container.dart';
 
+// ignore: must_be_immutable
 class ShoppingCartItem extends StatelessWidget {
   ShoppingCartItem(
       {super.key,
@@ -24,7 +25,7 @@ class ShoppingCartItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.sizeOf(context);
+    // var size = MediaQuery.sizeOf(context);
     return SurfaceContainer(
         child: Row(
       children: [

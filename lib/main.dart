@@ -4,7 +4,6 @@ import 'package:watchstore/component/theme.dart';
 import 'package:watchstore/res/colors.dart';
 import 'package:watchstore/rout/names.dart';
 import 'package:watchstore/rout/route.dart';
-import 'package:watchstore/screens/product_single_screen.dart';
 
 void main() {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(

@@ -9,7 +9,6 @@ import 'package:watchstore/res/strings.dart';
 import 'package:watchstore/widgets/custom_appBar.dart';
 import 'package:watchstore/widgets/pay_the_cart.dart';
 import 'package:watchstore/widgets/shopping_cart_item.dart';
-import 'package:watchstore/widgets/surface_container.dart';
 
 class BascketScreen extends StatelessWidget {
   const BascketScreen({super.key});
