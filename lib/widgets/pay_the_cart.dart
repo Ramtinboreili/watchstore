@@ -33,7 +33,8 @@ class PayTheCart extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            AppStrings.totalPrice.replaceAll(AppStrings.replace,price.seppratWithComma ) ,
+            AppStrings.totalPrice
+                .replaceAll(AppStrings.replace, price.seppratWithComma),
             style: AppTextStyles.title2,
           ),
           ElevatedButton(
