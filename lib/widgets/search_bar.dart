@@ -7,12 +7,9 @@ import 'package:watchstore/res/dimens.dart';
 import 'package:watchstore/res/strings.dart';
 
 class Searchbar extends StatelessWidget {
-  const Searchbar({
-    super.key,
-    required this.onTap
-  });
+  const Searchbar({super.key, required this.onTap});
 
-  final VoidCallback onTap ;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
