@@ -5,7 +5,7 @@ import 'package:watchstore/component/extentions.dart';
 import 'package:watchstore/res/dimens.dart';
 import 'package:watchstore/res/strings.dart';
 import 'package:watchstore/rout/names.dart';
-import 'package:watchstore/screens/auth/cubit/autentication_cubit.dart';
+import 'package:watchstore/screens/aute/cubit/autentication_cubit_cubit.dart';
 import 'package:watchstore/widgets/app_text_field.dart';
 import 'package:watchstore/widgets/main_button.dart';
 
@@ -37,11 +37,13 @@ class SendOtpScreen extends StatelessWidget {
                     Navigator.pushNamed(context, ScreenNames.verifyCodeScreen,
                         arguments: state.mobile);
                   } else if (state is ErrorState) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          backgroundColor: Colors.red,
-                          duration: Durations.long4,
-                          content: Text("خطایی رخ داده است  " , textDirection: TextDirection.rtl,)));
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        backgroundColor: Colors.red,
+                        duration: Durations.long4,
+                        content: Text(
+                          "خطایی رخ داده است  ",
+                          textDirection: TextDirection.rtl,
+                        )));
                   }
                 },
                 builder: (context, state) {
@@ -53,7 +55,8 @@ class SendOtpScreen extends StatelessWidget {
                   return MainButton(
                     text: AppStrings.sendOtpCode,
                     onPressed: () {
-                      BlocProvider.of<AutenticationCubit>(context).sendSms(_controller.text);
+                      BlocProvider.of<AutenticationCubit>(context)
+                          .sendSms(_controller.text);
                     },
                   );
                 },

@@ -8,7 +8,7 @@ import 'package:watchstore/component/extentions.dart';
 import 'package:watchstore/res/dimens.dart';
 import 'package:watchstore/res/strings.dart';
 import 'package:watchstore/rout/names.dart';
-import 'package:watchstore/screens/auth/cubit/autentication_cubit.dart';
+import 'package:watchstore/screens/aute/cubit/autentication_cubit_cubit.dart';
 import 'package:watchstore/widgets/app_text_field.dart';
 import 'package:watchstore/widgets/main_button.dart';
 
@@ -24,34 +24,37 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
   final TextEditingController _controller = TextEditingController();
 
   @override
-  initState(){
+  initState() {
     super.initState();
     startTimer();
   }
 
-  late Timer _timer ;
-  int _start = 120 ;
+  late Timer _timer;
+  int _start = 120;
 
-  startTimer(){
+  startTimer() {
     const onsec = Duration(seconds: 1);
-    _timer= Timer.periodic(onsec, (timer) {
-      setState(() {
-        if (_start==0) {
-        _timer.cancel();
-        Navigator.pop(context);
-      } else {
-        _start--;
-      }
-      });
-    },);
+    _timer = Timer.periodic(
+      onsec,
+      (timer) {
+        setState(() {
+          if (_start == 0) {
+            _timer.cancel();
+            Navigator.pop(context);
+          } else {
+            _start--;
+          }
+        });
+      },
+    );
   }
 
-  String formatTime(int sec){
-    int min = sec ~/60 ;
-    int seconds = sec %60 ;
+  String formatTime(int sec) {
+    int min = sec ~/ 60;
+    int seconds = sec % 60;
 
-    String minString = min.toString().padLeft(2,"0");
-    String secondsString = seconds.toString().padLeft(2,"0");
+    String minString = min.toString().padLeft(2, "0");
+    String secondsString = seconds.toString().padLeft(2, "0");
     return "$minString:$secondsString";
   }
 
@@ -105,6 +108,7 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
                     return MainButton(
                       text: AppStrings.next,
                       onPressed: () {
+                        _timer.cancel();
                         BlocProvider.of<AutenticationCubit>(context)
                             .verifyCode(mobileRouteArg, _controller.text);
                       },

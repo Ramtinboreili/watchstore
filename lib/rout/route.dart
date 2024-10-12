@@ -9,7 +9,7 @@ import 'package:watchstore/screens/aute/send_otp_screen.dart';
 
 Map<String , Widget Function(BuildContext)> routes = {
 
-  ScreenNames.root : (context) => SendOtpScreen(),
+  ScreenNames.sendSmsScreen : (context) => SendOtpScreen(),
   ScreenNames.verifyCodeScreen : (context) => VerifyCodeScreen(),
   ScreenNames.registerScreen : (context) => RegisterScreen(),
   ScreenNames.mainScreen : (context) => const MainScreen(),
