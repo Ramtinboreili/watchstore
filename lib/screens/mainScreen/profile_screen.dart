@@ -183,7 +183,7 @@ class ProfileScreen extends StatelessWidget {
               )),
               AppDimens.medium.height,
               Container(
-                padding: EdgeInsets.all(AppDimens.medium),
+                padding: const EdgeInsets.all(AppDimens.medium),
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(120)),
                 child: Image.network(

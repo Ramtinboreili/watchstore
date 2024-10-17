@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
               AppDimens.medium.height,
               // Banner
               Container(
-                padding: EdgeInsets.all(AppDimens.medium),
+                padding: const EdgeInsets.all(AppDimens.medium),
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(120)),
                 child: Image.network(

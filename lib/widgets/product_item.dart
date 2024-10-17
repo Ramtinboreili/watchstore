@@ -92,7 +92,7 @@ class ProductItem extends StatelessWidget {
           AppDimens.small.height,
           Visibility(
             visible: time > 0 ? true : false,
-            child: Text(
+            child: const Text(
               "09:26:22",
               style: AppTextStyles.prodTimerStyle,
             ),
@@ -104,7 +104,7 @@ class ProductItem extends StatelessWidget {
 }
 
 class VerticalText extends StatelessWidget {
-  VerticalText({super.key, required this.title});
+  const VerticalText({super.key, required this.title});
   final title;
   @override
   Widget build(BuildContext context) {

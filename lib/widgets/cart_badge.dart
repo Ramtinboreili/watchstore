@@ -11,10 +11,10 @@ class CartBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(height: 32,width: 32,),
+        const SizedBox(height: 32,width: 32,),
         SvgPicture.asset(
           Assets.svg.cart,
-          colorFilter: ColorFilter.mode(Colors.black, BlendMode.srcIn),
+          colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
         ),
         Visibility(
             visible:count>0 ?true:false ,

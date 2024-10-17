@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:watchstore/component/extentions.dart';
@@ -21,7 +22,7 @@ class ProductListScreen extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CartBadge(count: 2),
+                const CartBadge(count: 2),
                 Row(
                   children: [
                     const Text(
@@ -38,7 +39,7 @@ class ProductListScreen extends StatelessWidget {
             ),
           ),
           body: Column(
-            children: [AppDimens.medium.height, TagList() , ProductGridview()],
+            children: [AppDimens.medium.height, const TagList() , const ProductGridview()],
           )),
     );
   }
@@ -50,14 +51,14 @@ class TagList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: AppDimens.medium),
+      padding: const EdgeInsets.symmetric(vertical: AppDimens.medium),
       child: SizedBox(
         height: 26,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 9,
           reverse: true,
-          physics: ClampingScrollPhysics(),
+          physics: const ClampingScrollPhysics(),
           itemBuilder: (context, index) {
             return Container(
               margin: const EdgeInsets.symmetric(
@@ -69,7 +70,7 @@ class TagList extends StatelessWidget {
                 color: AppColors.primaryColor,
                 borderRadius: BorderRadius.circular(AppDimens.medium),
               ),
-              child: Text(
+              child: const Text(
                 "نیوفورس",
                 style: AppTextStyles.tagTitle,
               ),

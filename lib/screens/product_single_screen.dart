@@ -124,7 +124,7 @@ class _ProductTabViewState extends State<ProductTabView> {
         ),
         IndexedStack(
           index: selectedTabIndex,
-          children: [const Features(), const Reviews(), const Commnets()],
+          children: const [Features(), Reviews(), Commnets()],
         )
       ],
     );

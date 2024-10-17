@@ -14,7 +14,7 @@ import 'package:watchstore/widgets/main_button.dart';
 
 // ignore: must_be_immutable
 class VerifyCodeScreen extends StatefulWidget {
-  VerifyCodeScreen({super.key});
+  const VerifyCodeScreen({super.key});
 
   @override
   State<VerifyCodeScreen> createState() => _VerifyCodeScreenState();
