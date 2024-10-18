@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'watch Store',
         theme: lightTheme(),
-        // initialRoute: ScreenNames.root,
         routes: routes,
         home: BlocBuilder<AutenticationCubit, AutenticationState>(
           builder: (context, state) {
