@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
-import 'package:meta/meta.dart';
 import 'package:watchstore/data/Model/user.dart';
 import 'package:watchstore/data/costant.dart';
 import 'package:watchstore/res/dimens.dart';
@@ -23,7 +22,7 @@ class RegisterCubit extends Cubit<RegisterState> {
       textCancelPicker: "لغو",
       textConfirmPicker: "انتخاب",
       zoomOption: const ZoomOption(initZoom: 8),
-      initCurrentUserPosition: UserTrackingOption.withoutUserPosition(),
+      initCurrentUserPosition: const UserTrackingOption.withoutUserPosition(),
       radius: AppDimens.medium,
     ).then(
       (value) => emit(LocationpikedState(location: value)),
@@ -33,14 +32,18 @@ class RegisterCubit extends Cubit<RegisterState> {
   regiset({required User user}) async {
     emit(LoadingState());
 
-    print(user.toMap());
+    if (kDebugMode) {
+      print(user.toMap());
+    }
     try {
       String? token = SharedPerferencesManager()
           .getstring(SharedPreferencesConstants.token);
       _dio.options.headers["Authorization"] = "Bearer $token";
       await _dio.post(Endpoints.register,
        data: FormData.fromMap(user.toMap())).then((value) {
-        print(value);
+        if (kDebugMode) {
+          print(value);
+        }
          if (value.statusCode==201) {
            emit(OkResponsState());
          } else {

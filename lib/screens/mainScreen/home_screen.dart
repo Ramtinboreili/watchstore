@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    VerticalText(
+                    const VerticalText(
                       title: AppStrings.amazing,
                     ),
                     AppDimens.small.width,
@@ -127,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    VerticalText(
+                    const VerticalText(
                       title: AppStrings.topSells,
                     ),
                     AppDimens.small.width,
@@ -159,7 +159,7 @@ class HomeScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    VerticalText(
+                    const VerticalText(
                       title: AppStrings.newestProduct,
                     ),
                     AppDimens.small.width,
