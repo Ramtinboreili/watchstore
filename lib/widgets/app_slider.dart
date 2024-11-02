@@ -79,7 +79,7 @@ class _AppSliderState extends State<AppSlider> {
                             width: 12,
                             height: 12,
                             decoration: BoxDecoration(
-                                shape: BoxShape.circle,
+                                shape: BoxShape.circle,     
                                 color: _current == e.key
                                     ? Colors.black
                                     : Colors.grey),

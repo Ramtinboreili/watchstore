@@ -15,6 +15,7 @@ class RegistrationAppBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   Widget build(BuildContext context) {
+    
     return PreferredSize(
         preferredSize: Size(size.width, size.height * 0.15),
         child: Padding(
